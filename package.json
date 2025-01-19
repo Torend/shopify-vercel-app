@@ -1,5 +1,5 @@
 {
-  "name": "example-app-v2",
+  "name": "tellos-landing-page",
   "private": true,
   "scripts": {
     "build": "prisma generate && remix vite:build",

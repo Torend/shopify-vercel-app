@@ -1,10 +1,10 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "570dd80ead4538bbe2262e8eaf693274"
+client_id = "0eef25e89174a797d8121b3565fa2edc"
 application_url = "https://shopify-vercel-app-chi.vercel.app/"
 embedded = true
-name = "example-app-v2"
-handle = "example-app-v2"
+name = "Tellos Landing Page"
+handle = "tellos-landing-page"
 
 [webhooks]
 api_version = "2025-01"
