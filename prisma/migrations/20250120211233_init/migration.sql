@@ -11,7 +11,7 @@ CREATE TABLE "Session" (
     "firstName" TEXT,
     "lastName" TEXT,
     "email" TEXT,
-    "accountOwner" BOOLEAN NOT NULL DEFAULT false,
+    "accountOwner" BOOLEAN DEFAULT false,
     "locale" TEXT,
     "collaborator" BOOLEAN DEFAULT false,
     "emailVerified" BOOLEAN DEFAULT false,
@@ -51,7 +51,7 @@ CREATE TABLE "AssociatedUser" (
 
 -- CreateTable
 CREATE TABLE "Config" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "token" TEXT,
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -61,7 +61,7 @@ CREATE TABLE "Config" (
 
 -- CreateTable
 CREATE TABLE "ProcessedOrders" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "orderId" BIGINT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 

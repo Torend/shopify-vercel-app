@@ -1,6 +1,12 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
+}
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,14 +14,9 @@ generator client {
 // Note that some adapters may set a maximum length for the String type by default, please ensure your strings are long
 // enough when changing adapters.
 // See https://www.prisma.io/docs/orm/reference/prisma-schema-reference#string for more information
-datasource db {
-  provider  = "postgresql" // other supported providers are: postgresql, mysql, sqlite, sqlserver, mongodb
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_DATABASE_URL")
-}
 
 model Session {
-  id            String    @id @default(cuid())
+  id            String    @id @default(uuid())
   shop          String
   state         String
   isOnline      Boolean   @default(false)
@@ -26,12 +27,13 @@ model Session {
   firstName     String?
   lastName      String?
   email         String?
-  accountOwner  Boolean   @default(false)
+  accountOwner  Boolean?  @default(false)
   locale        String?
   collaborator  Boolean?  @default(false)
   emailVerified Boolean?  @default(false)
-   onlineAccessInfo    OnlineAccessInfo?
+  onlineAccessInfo    OnlineAccessInfo?
 }
+
 model OnlineAccessInfo {
   id                  String          @id @default(uuid())
   session             Session?        @relation(fields: [sessionId], references: [id])
@@ -49,7 +51,7 @@ model AssociatedUser {
   onlineAccessInfoId String?           @unique
   createdAt          DateTime          @default(now())
   updatedAt          DateTime          @updatedAt
-  userId             BigInt
+  userId             BigInt            @db.BigInt
   firstName          String
   lastName           String
   email              String
@@ -60,14 +62,14 @@ model AssociatedUser {
 }
 
 model Config {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @default(uuid())
   token     String?
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
 }
 
 model ProcessedOrders {
-  id        Int      @id @default(autoincrement())
-  orderId   BigInt   @unique
+  id        String   @id @default(uuid())
+  orderId   BigInt   @unique @db.BigInt
   createdAt DateTime @default(now())
 }
