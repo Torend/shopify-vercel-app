@@ -1,3 +1,3 @@
-import { flatRoutes } from "@remix-run/fs-routes";
+import { createRoutesFromFolders } from "@remix-run/fs-routes";
 
-export default flatRoutes();
+export const routes = createRoutesFromFolders();

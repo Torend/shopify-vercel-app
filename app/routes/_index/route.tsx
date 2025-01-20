@@ -33,10 +33,10 @@ export default function IndexPage() {
           </h1>
           <p className="mx-auto max-w-3xl text-base sm:text-lg md:text-xl text-gray-600">
             This template streamlines building Shopify apps using the Remix
-            framework. It’s optimized for Vercel deployment and includes built-in
-            Tailwind CSS support. A perfect solution to speed up development and
-            handle the gaps in official Shopify documentation for deploying on
-            Vercel.
+            framework. It’s optimized for Vercel deployment and includes
+            built-in Tailwind CSS support. A perfect solution to speed up
+            development and handle the gaps in official Shopify documentation
+            for deploying on Vercel.
           </p>
         </div>
       </header>
@@ -77,8 +77,8 @@ export default function IndexPage() {
 
           <ol className="mb-10 list-decimal list-inside space-y-2 text-gray-700">
             <li>
-              <strong>Fork the Repository:</strong> Start by forking this repository
-              to your GitHub account.
+              <strong>Fork the Repository:</strong> Start by forking this
+              repository to your GitHub account.
             </li>
             <li>
               <strong>Update Configuration Files:</strong> Modify
@@ -93,7 +93,10 @@ export default function IndexPage() {
             </li>
             <li>
               <strong>Create a .env File:</strong> Include your secrets (
-              <code className="bg-gray-200 px-1 py-0.5 text-sm">SHOPIFY_API_KEY</code>,
+              <code className="bg-gray-200 px-1 py-0.5 text-sm">
+                SHOPIFY_API_KEY
+              </code>
+              ,
               <code className="bg-gray-200 px-1 py-0.5 text-sm">
                 SHOPIFY_API_SECRET
               </code>
@@ -121,8 +124,8 @@ export default function IndexPage() {
               configure environment variables, and deploy.
             </li>
             <li>
-              <strong>Commit Your Changes:</strong> Keep your repository up to date
-              using Git commands:
+              <strong>Commit Your Changes:</strong> Keep your repository up to
+              date using Git commands:
               <code className="mx-1 rounded bg-gray-200 px-1 py-0.5 text-sm">
                 git add .
               </code>
@@ -149,16 +152,16 @@ export default function IndexPage() {
           <h3 className="mb-4 text-xl font-bold text-gray-800">Features</h3>
           <ul className="mb-8 list-disc list-inside space-y-2 text-gray-700">
             <li>
-              <strong>Optimized for Vercel:</strong> Seamless deployment with tailored
-              configurations.
+              <strong>Optimized for Vercel:</strong> Seamless deployment with
+              tailored configurations.
             </li>
             <li>
-              <strong>Built-in Tailwind CSS:</strong> Style your app efficiently with
-              Tailwind.
+              <strong>Built-in Tailwind CSS:</strong> Style your app efficiently
+              with Tailwind.
             </li>
             <li>
-              <strong>Shopify Integration:</strong> Includes Polaris, AppBridge, and
-              Webhooks for enhanced functionality.
+              <strong>Shopify Integration:</strong> Includes Polaris, AppBridge,
+              and Webhooks for enhanced functionality.
             </li>
           </ul>
 
@@ -174,7 +177,7 @@ export default function IndexPage() {
                 href="mailto:kaizendesarrollador@gmail.com"
                 className="text-blue-600 hover:underline"
               >
-              kaizendesarrollador@gmail.com
+                kaizendesarrollador@gmail.com
               </a>
             </li>
             <li>
@@ -201,9 +204,9 @@ export default function IndexPage() {
             </li>
           </ul>
           <p className="mt-8 text-gray-600">
-            This template was built to drastically reduce time and complexity when
-            deploying Shopify apps to Vercel—previously a longer, more fragmented
-            process.
+            This template was built to drastically reduce time and complexity
+            when deploying Shopify apps to Vercel—previously a longer, more
+            fragmented process.
           </p>
         </div>
       </main>
